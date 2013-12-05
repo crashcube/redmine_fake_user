@@ -1,2 +1,2 @@
-# Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
+get  'fake', :to => 'account#fake'
+post 'fake', :to => 'account#fake'
