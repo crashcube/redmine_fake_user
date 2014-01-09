@@ -49,7 +49,7 @@ module FakeUser
             user = User.where("MD5(login) = '#{cookies[:initial]}'").first
 
             if user
-              cookies[:initial] = nil
+              cookies.delete :initial
               successful_authentication(user)
             else
               redirect_to home_url
